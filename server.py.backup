@@ -64,4 +64,4 @@ if not os.path.isfile(os.environ['MOD_API_KEY']):
 from mod import webserver
 import os
 
-webserver.run()
+webserver.run(host='0.0.0.0', port=int(os.environ.get('MOD_DEVICE_WEBSERVER_PORT', 8888)))
